@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" >
+    <title>Molynx</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="lien-icone">
+                <img src="images/Logo_Molynx.png" alt="Logo Molynx">
+            </a>
+            <button class="burger" aria-label="Menu">
+                ☰
+            </button>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="?">Services</a>
+                <a href="?">Portfolio</a>
+                <a href="?">Articles</a>
+                <a href="?">À propos</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="sec_intro">
+            <div class="intro_main_bloc">
+                <img src="images/Logo_Molynx.png" alt="Illustration représentant des services web">
+                <div class="intro_bloc">
+                    <div class="intro_subloc">
+                        <h2>
+                            Data & Dashboards
+                        </h2>
+                        <div class="intro_text">
+                            <p>
+                                Nous transformons vos données en décisions
+                            </p>
+                        </div>
+                    </div>
+                    <div class="intro_subloc">
+                         <h2>
+                            Modélisation moléculaire
+                        </h2>
+                        <div class="intro_text">
+                            <p>
+                                Nous simulons la matière pour accélérer la R&D
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <a href="#" class="btn">Contactez-nous</a>
+            </div>       
+        </section>
+
+    </main>
+
+    <script>
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
+
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+</script>
+
+</body>

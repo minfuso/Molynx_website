@@ -102,7 +102,13 @@ nav a {
 }
 
 section {
-  margin: 200px 0; /* espace haut et bas entre les sections */
+  margin: 100px 0; /* espace haut et bas entre les sections */
+}
+
+@media screen and (max-width: 1300px) {
+  section {
+      margin: 100px, 0px;
+  }
 }
 
 .lien-icone {
@@ -158,7 +164,7 @@ a:hover {
     /* font-weight: 600; */
 }
 
-.intro_main_bloc, .data_main_bloc {
+.intro_main_bloc, .data_main_bloc, .data_main2_bloc, .IA_main_bloc {
     display: flex;
     flex-direction: row;
     width: 90%;
@@ -168,23 +174,26 @@ a:hover {
 }
 
 @media screen and (max-width: 1300px){
-    .intro_main_bloc {
+    .intro_main_bloc, .IA_main_bloc {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .data_main_bloc {
+    .data_main_bloc, .data_main2_bloc {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
     }
+    .data_bloc {
+      margin-top: 40px;
+    }
 }
 
-.sec_intro img, .sec_data img {
+.sec_intro img, .sec_data img, .sec_data2 img, .IA_sec img {
     width: 600px;
 }
 
-.intro_bloc, .data_bloc {
+.intro_bloc, .data_bloc, .IA_bloc {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -195,17 +204,17 @@ a:hover {
     padding: 30px;
 } */
 
-.intro_subloc h2, .data_subloc h2 {
+.intro_subloc h2, .data_subloc h2, .IA_subloc h2 {
     display: block;
     margin: 40px 0px;
 }
 
-.data_subloc h2 {
+.data_subloc h2, .IA_subloc h2 {
   display: block;
   padding-left: 25px;
 }
 
-.intro_text, .data_text {
+.intro_text, .data_text, .IA_text {
     padding-left: 50px;
     font-family: "Source Sans 3", sans-serif;
     font-style: italic;
@@ -222,11 +231,11 @@ a:hover {
 } */
 
 
-.sec_intro h1, .sec_data h1 {
+.sec_intro h1, .sec_data h1, .sec_data2 h1, .IA_sec h1  {
   margin: 30px 0px;
 }
 
-.sec_data h2 {
+.sec_data h2, .sec_data2 h2, .IA_sec h2 {
   margin: 15px 0px;
 }
 
@@ -294,7 +303,7 @@ a:hover {
   background-color: var(--background_color);
 }
 
-.sec_data img {
+.sec_data img, .sec_data2 img, .IA_sec img {
   border-radius: 15px;
 }
 

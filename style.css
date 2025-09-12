@@ -165,7 +165,7 @@ a:hover {
     /* font-weight: 600; */
 }
 
-.intro_main_bloc, .data_main_bloc, .data_main2_bloc, .IA_main_bloc {
+.intro_main_bloc, .data_main_bloc, .data_main2_bloc, .IA_main_bloc, .process_main_bloc, .molecule_main_bloc {
     display: flex;
     flex-direction: row;
     width: 90%;
@@ -175,12 +175,12 @@ a:hover {
 }
 
 @media screen and (max-width: 1300px){
-    .intro_main_bloc, .IA_main_bloc {
+    .intro_main_bloc, .IA_main_bloc, .process_main_bloc {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .data_main_bloc, .data_main2_bloc {
+    .data_main_bloc, .data_main2_bloc, .molecule_main_bloc {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
@@ -190,7 +190,7 @@ a:hover {
     }
 }
 
-.sec_intro img, .sec_data img, .sec_data2 img, .IA_sec img {
+.sec_intro img, .sec_data img, .sec_data2 img, .IA_sec img, .sec_process img, .sec_molecule img {
     width: 600px;
 }
 
@@ -232,11 +232,11 @@ a:hover {
 } */
 
 
-.sec_intro h1, .sec_data h1, .sec_data2 h1, .IA_sec h1  {
+.sec_intro h1, .sec_data h1, .sec_data2 h1, .IA_sec h1, .sec_process h1, .sec_molcule h1  {
   margin: 30px 0px;
 }
 
-.sec_data h2, .sec_data2 h2, .IA_sec h2 {
+.sec_data h2, .sec_data2 h2, .IA_sec h2, .sec_process h2, .sec_molecule h2 {
   margin: 15px 0px;
 }
 
@@ -304,7 +304,7 @@ a:hover {
   background-color: var(--background_color);
 }
 
-.sec_data img, .sec_data2 img, .IA_sec img {
+.sec_data img, .sec_data2 img, .IA_sec img, .sec_process img, .sec_molecule img {
   border-radius: 15px;
 }
 
@@ -313,7 +313,3 @@ a:hover {
   flex-direction: row;
   justify-content: center;
 }
-/* .data_main_bloc {
-  background-color: var(--background_color_2);
-  border-radius: 50px;
-} */

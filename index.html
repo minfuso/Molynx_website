@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" >
     <title>Molynx</title>
-    <link href="style.css?v=202512091" rel="stylesheet">
+    <link href="style.css?v=202512092" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
@@ -69,6 +69,10 @@
                 </div>
             </div>     
         </section>
+
+    <section class="sec_contact">
+        <a href="#anchor_message" class="btn">Contactez-nous</a>
+    </section>
 
     <section class="sec_data">
         <div class="data_main_bloc">
@@ -161,19 +165,19 @@
                         Ventes
                     </h2>
                     <div class="data_text">
-                        Chiffres, marges, récurrence, alertes de baisse
+                        Chiffres, marges, récurrences, alertes de baisse
                     </div>
                     <h2>
                         Opérations
                     </h2>
                     <div class="data_text">
-                        Délais, qualité, stocks, charge
+                        Délais, qualité, stocks, charges
                     </div>
                     <h2>
                         Finance
                     </h2>
                     <div class="data_text">
-                        Trésorerie, coûts, prévision simple
+                        Trésorerie, coûts, prévisions simples
                     </div>
 
                 </div>
@@ -228,7 +232,7 @@
 
                     <div class="data_text">
 
-                        On livre un dashboard / lisible avec les mises à jour
+                        On livre un dashboard lisible avec les mises à jour
 
                     </div>
 
@@ -293,10 +297,29 @@
     </section>
 
 
+    <section class="sec_message" id="anchor_message">
 
+        <h1>Parlons de votre projet</h1>
 
-    <section class="sec_contact">
-        <a href="#" class="btn">Contactez-nous</a>
+        <form method="GET" action="#">
+
+            <div class="form-nom-email">
+                    <div class="form-column">
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" id="nom" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+            </div>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="10" required></textarea>
+                <div class="submit_btn">
+                    <button type="submit" class="btn">Envoyer</button>
+                </div>
+        </form>
+
     </section>
 
     </main>

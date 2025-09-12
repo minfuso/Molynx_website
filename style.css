@@ -103,12 +103,12 @@ nav a {
 }
 
 section {
-  margin: 100px 0; /* espace haut et bas entre les sections */
+  margin: 150px 0; /* espace haut et bas entre les sections */
 }
 
 @media screen and (max-width: 1300px) {
   section {
-      margin: 100px, 0px;
+      margin: 100px 0px;
   }
 }
 
@@ -236,29 +236,27 @@ a:hover {
   margin: 30px 0px;
 }
 
+.sec_contact {
+  margin: 0px 0px;
+}
+
 .sec_data h2, .sec_data2 h2, .IA_sec h2, .sec_process h2, .sec_molecule h2 {
   margin: 15px 0px;
 }
 
-.btn {
-    display: block;
-    margin: 40px auto;
-    width: fit-content;
-    text-align: center;    /* le texte reste bien centré */
-    white-space: nowrap;   /* empêche la coupure du texte */
-}
 
 @media screen and (max-width: 1300px) {
     .btn {
-        text-align: center;    /* le texte reste bien centré */
-        white-space: nowrap;   /* empêche la coupure du texte */
         font-size: 1.4em;
     }
 }
 
 .btn {
     position: relative;
-    display: inline-block;
+    display: block;
+    text-align: center;
+    width: fit-content;
+     white-space: nowrap;
     background: var(--button_color);
     color: var(--text_color);
     border-radius: 50px;
@@ -312,4 +310,57 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+  color: white;
+}
+
+.form-nom-email {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.form-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  padding: 15px;
+  border-radius: 3px;
+  border: none;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+.sec_message h1 {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.submit_btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1300px) {
+
+  form {
+    width: 70%;
+  }
+
 }

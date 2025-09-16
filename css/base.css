@@ -1,0 +1,32 @@
+:root {
+    --background_color: #041726;
+    --comment_color: #585858;
+    --dark_grey:#1b263b;
+    --night_blue:#162447;
+    --text_color: #E0E1DD;
+    --button_color: #625c8e;
+    --button_hover_color: #3D348B;
+    --header_color_1: #1B263B;
+    --header_color_2: #162447;
+    --heading_color:#625c8e;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 1.3em;
+  background-color: var(--background_color);
+  color: var(--text_color);
+}
+

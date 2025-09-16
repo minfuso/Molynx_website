@@ -1,0 +1,69 @@
+section {
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+}
+
+section h1 {
+    margin: 2rem 15px 2rem;
+}
+
+section h2 {
+    margin: 2rem 30px 2rem;
+}
+
+section h3 {
+    margin: 2rem 30px 2rem;
+}
+
+section p {
+  margin: 0px 60px 1rem;   /* marge en bas de chaque paragraphe */
+}
+
+section ol, section ul {
+    margin: 0px 120px 1rem;   /* marge en bas de chaque paragraphe */
+    line-height: 1.7;
+}
+
+.pricing-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  align-items: stretch;
+  margin: 0px 60px 1rem;
+}
+
+/* Cartes */
+
+.details {
+  color: var(--comment_color);
+  font-weight: 400;
+}
+
+.mentions {
+  margin-top:18px;
+  font-size:1em;
+  color:var(--comment_color)
+}
+
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card p, .card ul {
+  margin: 15px 15px 2rem;
+}
+
+.card h3 {
+    margin: 2rem 15px 2rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .card {
+    margin: 40px 0px;
+    width: 90%;
+  }
+}

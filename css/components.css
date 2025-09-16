@@ -1,0 +1,128 @@
+h1 {
+    font-size: 2em;
+    color: var(--heading_color);
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--heading_color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: var(--text_color);
+  text-decoration: none;
+}
+
+a:hover {
+    text-decoration: None;
+    color: var(--button_color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    /* font-weight: 600; */
+}
+
+strong {
+  color: var(--heading_color)
+}
+
+@media screen and (max-width: 1300px) {
+    .btn {
+        font-size: 1.4em;
+    }
+}
+
+.btn {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: fit-content;
+     white-space: nowrap;
+    background: var(--button_color);
+    color: var(--text_color);
+    border-radius: 50px;
+    padding: 20px 30px;
+    border: none;
+    cursor: pointer;
+    /* transition: color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; */
+    transition: opacity .4s ease;
+    overflow: hidden;
+    margin: 0px 15px;
+    font-size: 1.1em;
+    z-index: 0;
+}
+
+.btn a {
+    color: var(--text_color)
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(var(--button_color), var(--button_hover_color));
+  opacity: 0;                          /* invisible par défaut */
+  transition: opacity .4s ease;        /* FONDU en aller/retour */
+  pointer-events: none;
+  z-index: -1; 
+}
+
+.btn:hover::after {
+  opacity: 1;                          /* le gradient apparaît en douceur */
+}
+
+.btn:hover {
+    color: var(--text_color);
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    text-decoration: none;  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+  color: white;
+}
+
+.form-nom-email {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.form-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  padding: 15px;
+  border-radius: 3px;
+  border: none;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+.submit_btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1300px) {
+
+  form {
+    width: 70%;
+  }
+
+}

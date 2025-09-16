@@ -1,0 +1,90 @@
+.intro_main_bloc, .data_main_bloc, .data_main2_bloc, .IA_main_bloc, .process_main_bloc, .molecule_main_bloc {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: stretch;
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 1300px){
+    .intro_main_bloc, .IA_main_bloc, .process_main_bloc {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .data_main_bloc, .data_main2_bloc, .molecule_main_bloc {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .data_bloc {
+      margin-top: 40px;
+    }
+}
+
+.sec_intro img, .sec_data img, .sec_data2 img, .IA_sec img, .sec_process img, .sec_molecule img {
+    width: 600px;
+}
+
+.intro_bloc, .data_bloc, .IA_bloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:flex-start
+}
+
+/* .intro_subloc {
+    padding: 30px;
+} */
+
+.intro_subloc h2, .data_subloc h2, .IA_subloc h2 {
+    display: block;
+    margin: 40px 0px;
+}
+
+.data_subloc h2, .IA_subloc h2 {
+  display: block;
+  padding-left: 25px;
+}
+
+.intro_text, .data_text, .IA_text {
+    padding-left: 50px;
+    font-family: "Source Sans 3", sans-serif;
+    font-style: italic;
+    font-weight: 200;
+}
+
+
+.sec_intro h1, .sec_data h1, .sec_data2 h1, .IA_sec h1, .sec_process h1, .sec_molcule h1  {
+  margin: 30px 0px;
+}
+
+.sec_contact {
+  margin: 0px 0px;
+}
+
+.sec_data h2, .sec_data2 h2, .IA_sec h2, .sec_process h2, .sec_molecule h2 {
+  margin: 15px 0px;
+}
+
+.sec_data {
+  background-color: var(--background_color);
+}
+
+.sec_data img, .sec_data2 img, .IA_sec img, .sec_process img, .sec_molecule img {
+  border-radius: 15px;
+}
+
+.sec_contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sec_message h1 {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}

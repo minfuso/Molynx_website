@@ -126,3 +126,9 @@ label {
   }
 
 }
+
+.sec_contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

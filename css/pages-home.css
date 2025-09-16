@@ -76,12 +76,6 @@
   border-radius: 15px;
 }
 
-.sec_contact {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 .sec_message h1 {
   position: relative;
   display: block;

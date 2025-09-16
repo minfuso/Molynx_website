@@ -104,6 +104,7 @@ footer {
   background: var(--header_color_1);
   color: var(--text_color);
   padding: 40px 20px;
+  margin-top: auto;        
 }
 
 .footer-container {

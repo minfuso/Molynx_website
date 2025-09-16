@@ -1,0 +1,36 @@
+h1 {
+    margin: 2rem 15px 2rem;
+}
+
+p {
+    margin: 0px 60px 1rem;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+    gap: 100px;
+}
+
+.about img {
+    width: 15%;
+    border-radius: 50%;
+    background-color: var(--header_color_1);
+}
+
+@media screen and (max-width: 1300px){
+    .about {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about img {
+        width: 40%;
+    }
+
+}

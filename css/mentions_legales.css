@@ -1,0 +1,15 @@
+h1 {
+    margin: 2rem 15px 2rem;
+}
+
+h2 {
+    margin: 0px 30px 1rem;
+}
+
+p, ul{
+    margin: 0px 60px 1rem;
+}
+
+section {
+    margin: 2rem 0px 2rem;
+}

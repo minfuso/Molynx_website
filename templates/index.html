@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8" >
     <title>Molynx</title>
-    <link rel="stylesheet" href="css/base.css?v=2">
-    <link rel="stylesheet" href="css/layout.css?v=2">
-    <link rel="stylesheet" href="css/components.css?v=2">
-    <link rel="stylesheet" href="css/pages-home.css?v=2">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages-home.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
@@ -17,18 +17,18 @@
 
     <header>
         <nav>
-            <a href="index.html" class="lien-icone">
-                <img src="images/Logo_Molynx.png" alt="Logo Molynx">
+            <a href="{{ url_for('home')}}" class="lien-icone">
+                <img src="{{ url_for('static', filename='images/Logo_Molynx.png')}}" alt="Logo Molynx">
             </a>
             <button class="burger" aria-label="Menu">
                 ☰
             </button>
             <div class="nav-links">
-                <a href="index.html">Accueil</a>
-                <a href="services.html">Services</a>
+                <a href="{{ url_for('home')}}">Accueil</a>
+                <a href="{{ url_for('services')}}">Services</a>
                 <a href="?">Portfolio</a>
-                <a href="articles.html">Articles</a>
-                <a href="a_propos.html">À propos</a>
+                <a href="{{ url_for('articles')}}">Articles</a>
+                <a href="{{ url_for('a_propos')}}">À propos</a>
             </div>
         </nav>
     </header>
@@ -37,7 +37,7 @@
 
         <section class="sec_intro">
             <div class="intro_main_bloc">
-                <img src="images/Logo_Molynx.png" alt="Logo de Molynx.">
+                <img src="{{ url_for('static', filename='images/Logo_Molynx.png')}}" alt="Logo de Molynx.">
                 <div class="intro_bloc">
                     <div class="intro_subloc">
                         <h1>
@@ -102,7 +102,7 @@
 
             </div>
 
-            <img src="images/data_science.jpg" title="Photo de Sharad Bhat sur Unsplash" alt="Illustration d'un tableau de bord de données">
+            <img src="{{ url_for('static', filename='images/data_science.jpg')}}" title="Photo de Sharad Bhat sur Unsplash" alt="Illustration d'un tableau de bord de données">
 
         </div>
 
@@ -112,7 +112,7 @@
 
         <div class="IA_main_bloc">
 
-            <img src="images/Ia_general.jpg" alt="Illustration générique d'un graphique de données" title="Photo de Omar:. Lopez-Rincon sur Unsplash">
+            <img src="{{ url_for('static', filename='images/Ia_general.jpg')}}" alt="Illustration générique d'un graphique de données" title="Photo de Omar:. Lopez-Rincon sur Unsplash">
 
             <div class="IA_bloc">
 
@@ -188,7 +188,7 @@
 
             </div>
 
-            <img src="images/data_science2.jpg" alt="Illustration générque d'un laptop avec une image abstraite d'afficher dessus" title="Photo de Feliphe Schiarolli sur Unsplash">
+            <img src="{{ url_for('static', filename='images/data_science2.jpg')}}" alt="Illustration générque d'un laptop avec une image abstraite d'afficher dessus" title="Photo de Feliphe Schiarolli sur Unsplash">
 
         </div>
 
@@ -199,7 +199,7 @@
 
         <div class="process_main_bloc">
 
-            <img src="images/process.jpg" alt="Illustration abstraite d'un flux" title="Photo de Conny Schneider sur Unsplash">
+            <img src="{{ url_for('static', filename='images/process.jpg')}}" alt="Illustration abstraite d'un flux" title="Photo de Conny Schneider sur Unsplash">
 
             <div class="data_bloc">
 
@@ -293,7 +293,7 @@
 
             </div>
 
-            <img src="images/molecules.jpg" alt="Illustration abstraite de molécules" title="Photo de Google DeepMind sur Unsplash">
+            <img src="{{ url_for('static', filename='images/molecules.jpg')}}" alt="Illustration abstraite de molécules" title="Photo de Google DeepMind sur Unsplash">
 
         </div>
 
@@ -304,7 +304,7 @@
 
         <h1>Parlons de votre projet</h1>
 
-        <form method="GET" action="#">
+        <form method="POST" action="{{ url_for('contact')}}">
 
             <div class="form-nom-email">
                     <div class="form-column">
@@ -330,14 +330,14 @@
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="images/Logo_Molynx.png" alt="Logo Molynx">
+                <img src="{{ url_for('static', filename='images/Logo_Molynx.png')}}" alt="Logo Molynx">
                 <p>Data • IA • Modélisation</p>
             </div>
 
             <div class="footer-contact">
                 <p>Email : <a href="mailto:contact@molynx.com">contact@molynx.com</a></p>
                 <p>LinkedIn : <a href="#">linkedin.com/company/molynx</a></p>
-                <p><a href="mentions_legales.html">Mentions légales</a></p>
+                <p><a href="{{ url_for('mentions_legales')}}">Mentions légales</a></p>
             </div>
         </div>
 

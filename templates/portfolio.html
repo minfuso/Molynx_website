@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages-a_propos.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages-portfolio.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
@@ -37,18 +37,16 @@
 
         <section>
 
-            <div class="about">
-                <img src="{{ url_for('static', filename='images/profile_pic.png')}}" alt="Photo de Maxime Infuso" title="Photo de Maxime Infuso" class="about-photo">
-                <div class="about-text">
-                    <p><strong>Molynx</strong> a été fondé par <strong>Maxime Infuso</strong>, <strong>docteur en chimie théorique</strong> et 
-                    spécialiste des méthodes de simulation numérique et mise en place de solutions IA. Après plusieurs années de recherche académique 
-                    et le développement de modèles d'intelligence artificielle appliqués aux systèmes moléculaires, 
-                    j'ai créé <strong>Molynx</strong> pour mettre ces compétences au service des entreprises et des laboratoires.</p>
+            <h1>Projets personnels</h1>
 
-                    <p>Je suis aujourd'hui le <strong>fondateur et unique consultant de Molynx</strong>. 
-                    Cela signifie que chaque mission bénéficie directement de <strong>mon expertise</strong> scientifique et technique, 
-                    de l'écoute attentive de vos besoins, et d'un accompagnement sur-mesure.</p>
-                </div>
+            <div class="projects_cards">
+
+                <a class="card" href="/dashboard/dashboard_crypto/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/dashboard_crypto_mini.jpg')}}" alt="Miniature projet dashboard crypto">
+                    <h2>Projet Crypto</h2>
+                    <p>Dashboard informatif sur des cryptomonnaies + IA prédictive sur le Bitcoin</p>
+                </a>
+
             </div>
 
         </section>

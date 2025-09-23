@@ -28,8 +28,8 @@ h1, h2, .h3_global {
 .tabs .custom-tab {
     flex: 1 1 auto;        
     text-align: center;
-    min-width: 120px;   
-    max-width: 200px;
+    min-width: 200px;   
+    max-width: 300px;
     background-color: var(--header_color_1) !important;
     color: var(--text_color) !important;
     font-size: 1.1em;

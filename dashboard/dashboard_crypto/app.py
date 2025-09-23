@@ -41,8 +41,8 @@ def init_dashboard(server):
         html.H1("Dashboard Crypto (Binance API)"),
 
         dcc.Tabs(id="tabs", value="tab1", className="tabs", children=[
-            dcc.Tab(label="Prix", value="tab1", className="custom-tab", selected_className="custom-tab--selected"),
-            dcc.Tab(label="Bitcoin IA", value="tab2", className="custom-tab", selected_className="custom-tab--selected"),
+            dcc.Tab(label="Evolution du prix", value="tab1", className="custom-tab", selected_className="custom-tab--selected"),
+            dcc.Tab(label="Prédiction bitcoin IA", value="tab2", className="custom-tab", selected_className="custom-tab--selected"),
         ]),
 
         html.Div(id="tabs-content", className="tabs-content")
@@ -80,7 +80,7 @@ def init_dashboard(server):
                 html.Div(
                 [
                         html.Div([
-                            html.H3("Prédiction IA", className="card-title"),
+                            html.H3("Prédiction Bitcoin IA pour la prochaine heure", className="card-title"),
                             html.P("Prédiction tendance", id="predict-tendency"),
                             html.P("Prédiction stratégie", id="predict-strategy"),
                             html.P("Cliquez sur le bouton pour faire une prédiction", id="predict-date")
@@ -333,8 +333,10 @@ def init_dashboard(server):
             ]) 
         elif (pred_up > 0.46) and ( pred_up < 0.54):
             strategy = html.Span([
-                "Nous vous conseillons de ",
-                html.Strong("hold"),
+                "Nous vous conseillons ",
+                html.Strong("ni d'acheter"),
+                ", ",
+                html.Strong("ni de vendre"),
                 " pour la prochaine heure"
             ]) 
         else:

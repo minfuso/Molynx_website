@@ -30,6 +30,10 @@ def home():
 def services():
     return render_template("services.html")
 
+@server.route("/portfolio")
+def portfolio():
+    return render_template("portfolio.html")
+
 @server.route("/articles")
 def articles():
     return render_template("articles.html")

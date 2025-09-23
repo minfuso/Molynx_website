@@ -1,0 +1,58 @@
+data:
+  files_by_split:
+    train:
+      - "/mnt/Molynx/Portfolio/Dashboard_crypto/Informer/BTC_dev/data/prepared/BTCUSDT_1h_continuous_1.csv"
+      - "/mnt/Molynx/Portfolio/Dashboard_crypto/Informer/BTC_dev/data/prepared/BTCUSDT_1h_continuous_2.csv"
+      - "/mnt/Molynx/Portfolio/Dashboard_crypto/Informer/BTC_dev/data/prepared/BTCUSDT_1h_continuous_3.csv"
+      - "/mnt/Molynx/Portfolio/Dashboard_crypto/Informer/BTC_dev/data/prepared/BTCUSDT_1h_continuous_4.csv"
+      - "/mnt/Molynx/Portfolio/Dashboard_crypto/Informer/BTC_dev/data/prepared/BTCUSDT_1h_continuous_5.csv"
+      - "/mnt/Molynx/Portfolio/Dashboard_crypto/Informer/BTC_dev/data/prepared/BTCUSDT_1h_continuous_6.csv"
+      - "/mnt/Molynx/Portfolio/Dashboard_crypto/Informer/BTC_dev/data/prepared/BTCUSDT_1h_continuous_7.csv"
+      - "/mnt/Molynx/Portfolio/Dashboard_crypto/Informer/BTC_dev/data/prepared/BTCUSDT_1h_continuous_8.csv"
+    val:
+      - "/mnt/Molynx/Portfolio/Dashboard_crypto/Informer/BTC_dev/data/prepared/BTCUSDT_1h_continuous_val.csv"
+    test:
+      - "/mnt/Molynx/Portfolio/Dashboard_crypto/Informer/BTC_dev/data/prepared/BTCUSDT_1h_continuous_test.csv"
+  date_column: "open_time"
+  features_map:
+    open: standard
+    high: standard
+    low: standard
+    close: standard
+    sma_7d: standard
+    sma_30d: standard
+    sma_50d: standard
+    sma_100d: standard
+    volume: log_standard
+    quote_asset_volume: log_standard
+    number_of_trades: log_standard
+    taker_buy_base: log_standard
+    taker_buy_quote: log_standard
+    volume_rel20: log_standard
+    volume_rel20d: log_standard
+    return: standard
+    volatility_20: standard
+    volatility_50: standard
+    volatility_100: standard
+    volatility_14d: standard
+    rsi_14: minmax
+    rsi_14d: minmax
+    MACD: standard
+    Signal: standard
+    MACD_Hist: standard
+  target: "will_up"
+  sequence_length: 24
+  split:
+    train: 0.7
+    val: 0.15
+    test: 0.15
+  batch_size: 32
+  shuffle: false
+
+outputs:
+  splits_npz: "outputs/splits/btc_seq24.npz"
+  scalers_pkl: "outputs/scalers/btc_seq24_scalers.pkl"
+
+logging:
+  log_dir: "logs"
+  log_name: "prep_seq24_1"

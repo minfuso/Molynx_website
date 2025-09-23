@@ -1,0 +1,212 @@
+h1, h2, .h3_global {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.graph {
+    margin-top: 20px
+}
+
+.tab-title {
+    text-align: center;
+    font-size: 2em;
+    color: var(--heading_color);
+    margin-top: 80px;
+}
+
+/* ===== TABS ===== */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;        
+    justify-content: center; 
+    align-items: center;
+    gap: 10px;
+    margin: 60px auto;
+    border: 0;
+}
+
+.tabs .custom-tab {
+    flex: 1 1 auto;        
+    text-align: center;
+    min-width: 120px;   
+    max-width: 200px;
+    background-color: var(--header_color_1) !important;
+    color: var(--text_color) !important;
+    font-size: 1.1em;
+    padding: 15px 25px !important;
+    border-radius: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 0 !important;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.custom-tab:hover {
+    background: var(--button_hover_color) !important;
+    color: var(--text_color);
+    transform: translateY(-3px);
+}
+
+/* Onglet actif */
+.tabs .custom-tab--selected {
+    background: var(--button_color) !important;
+    color: var(--text_color) !important;
+    font-weight: 700;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Contenu sous les tabs */
+.tabs-content {
+    background: var(--background_color);
+    border-radius: 0 15px 15px 15px;
+    padding: 30px;
+    margin-top: -10px;
+    border: 0;
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    .tabs {
+        flex-direction: column;     /* les onglets passent en colonne */
+        width: 80%;
+        margin: 60px auto;
+    }
+
+    .tabs .custom-tab {
+        border-radius: 50px;        /* arrondis complets (style bouton) */
+        width: 100%;                /* pleine largeur */
+    }
+
+    .tabs .custom-tab.custom-tab--selected {
+        border-radius: 50px;        /* arrondi uniforme sur mobile */
+    }
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dropdown .Select-control {
+    background: var(--button_color);
+    color: var(--text_color);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+
+    /* taille et alignement */
+    height: 45px;
+    padding: 0 15px;
+    width: 200px;
+}
+
+/* Placeholder et zone de valeur sélectionnée */
+.dropdown .Select-placeholder,
+.dropdown .Select-value {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: var(--text_color) !important;
+    margin-left: 15px;
+}
+
+/* Texte sélectionné */
+.dropdown .Select-value-label {
+    color: var(--text_color) !important;
+    font-size: 1.1em;
+    line-height: 1.5em !important;
+    display: flex;
+    align-items: center;
+}
+
+/* Icônes (croix et flèche) */
+.dropdown .Select-clear,
+.dropdown .Select-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text_color);
+}
+
+/* Liste déroulante */
+.dropdown .Select-menu-outer {
+    background: var(--header_color_1);
+    color: var(--text_color);
+    border-radius: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--button_color);
+    font-size: 1em;
+    z-index: 1000; /* évite que ça passe derrière */
+}
+
+/* Options */
+.dropdown .Select-option {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Option au survol */
+.dropdown .Select-option.is-focused {
+    background: var(--button_hover_color);
+    color: var(--text_color);
+}
+
+/* Option sélectionnée */
+.dropdown .Select-option.is-selected {
+    background: var(--button_color);
+    color: var(--text_color);
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: var(--header_color_1);
+    color: var(--text_color);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    min-width: 400px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.card p {
+    margin: 1em;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card-value {
+    font-size: 2em;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        max-width: 90%;
+    }
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-centre {
+    display: block;        /* ou inline-block selon le cas */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}

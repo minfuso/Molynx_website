@@ -3,40 +3,46 @@ from dotenv import load_dotenv
 from flask import Flask, render_template, request
 from flask_mail import Mail, Message
 
+from dashboard.dashboard_crypto.app import init_dashboard
+
+
 load_dotenv()
 
-app = Flask(__name__)
+server = Flask(__name__)
+
+# Dashboards initialisation
+dash_app = init_dashboard(server) # Dashboard-crypto
 
 # Configuration SMTP LaPoste
-app.config["MAIL_SERVER"] = "smtp.laposte.net"
-app.config["MAIL_PORT"] = 587
-app.config["MAIL_USE_TLS"] = True
-app.config["MAIL_USERNAME"] = os.getenv("MAIL_USERNAME")
-app.config["MAIL_PASSWORD"] = os.getenv("MAIL_PASSWORD")
+server.config["MAIL_SERVER"] = "smtp.laposte.net"
+server.config["MAIL_PORT"] = 587
+server.config["MAIL_USE_TLS"] = True
+server.config["MAIL_USERNAME"] = os.getenv("MAIL_USERNAME")
+server.config["MAIL_PASSWORD"] = os.getenv("MAIL_PASSWORD")
 
-mail = Mail(app)
+mail = Mail(server)
 
-@app.route("/")
+@server.route("/")
 def home():
     return render_template("index.html")
 
-@app.route("/services")
+@server.route("/services")
 def services():
     return render_template("services.html")
 
-@app.route("/articles")
+@server.route("/articles")
 def articles():
     return render_template("articles.html")
 
-@app.route("/a_propos")
+@server.route("/a_propos")
 def a_propos():
     return render_template("a_propos.html")
 
-@app.route("/mentions_legales")
+@server.route("/mentions_legales")
 def mentions_legales():
     return render_template("mentions_legales.html")
 
-@app.route("/contact", methods=["GET", "POST"])
+@server.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
         nom = request.form.get("nom")
@@ -45,7 +51,7 @@ def contact():
         
         msg = Message(
             subject="Nouveau message du site Molynx",
-            sender=app.config["MAIL_USERNAME"],
+            sender=server.config["MAIL_USERNAME"],
             recipients=["maxime.infuso@laposte.net"],
             body=f"Nom : {nom}\nEmail : {email}\n\nMessage :\n{message}"
         )
@@ -64,4 +70,4 @@ def contact():
     return render_template("index.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    server.run(debug=True)

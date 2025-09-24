@@ -56,7 +56,7 @@ def contact():
         msg = Message(
             subject="Nouveau message du site Molynx",
             sender=server.config["MAIL_USERNAME"],
-            recipients=["maxime.infuso@laposte.net"],
+            recipients=["contact@molynx.fr"],
             body=f"Nom : {nom}\nEmail : {email}\n\nMessage :\n{message}"
         )
 

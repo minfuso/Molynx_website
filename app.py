@@ -14,7 +14,7 @@ server = Flask(__name__)
 dash_app = init_dashboard(server) # Dashboard-crypto
 
 # Configuration SMTP LaPoste
-server.config["MAIL_SERVER"] = "smtp.laposte.net"
+server.config["MAIL_SERVER"] = "pro3.mail.ovh.net"
 server.config["MAIL_PORT"] = 587
 server.config["MAIL_USE_TLS"] = True
 server.config["MAIL_USERNAME"] = os.getenv("MAIL_USERNAME")

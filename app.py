@@ -97,7 +97,7 @@ def sitemap():
 
     for ep in static_endpoints:
         try:
-            url = url_for(ep, _external=True)
+            url = url_for(ep, _external=True, _scheme='https')
         except Exception as e:
             # Si l’endpoint n’existe pas, on saute
             continue

@@ -20,6 +20,7 @@ server.config["MAIL_PORT"] = 587
 server.config["MAIL_USE_TLS"] = True
 server.config["MAIL_USERNAME"] = os.getenv("MAIL_USERNAME")
 server.config["MAIL_PASSWORD"] = os.getenv("MAIL_PASSWORD")
+server.config['PREFERRED_URL_SCHEME'] = 'https'
 
 mail = Mail(server)
 

@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from flask import Flask, render_template, request
+from flask import send_from_directory, url_for, make_response, redirect
 from flask_mail import Mail, Message
 
 from dashboard.dashboard_crypto.app import init_dashboard
@@ -68,10 +69,45 @@ def contact():
         
         mail.send(msg)
         
-        return render_template("index.html")
+        return redirect(url_for("contact"))
 
     # si on arrive sur /contact en GET (rare dans ton cas), on peut rediriger
     return render_template("index.html")
+
+@server.route('/robots.txt')
+def serve_robots():
+    return send_from_directory(server.static_folder, 'robots.txt')
+
+
+@server.route('/sitemap.xml')
+def sitemap():
+    pages = []
+
+    # Liste des noms de routes statiques que tu veux inclure
+    static_endpoints = [
+        'home',        # ta page d’accueil
+        'services',
+        'portfolio',
+        'articles',
+        'a_propos',
+        'mentions_legales',
+        'contact'
+    ]
+
+    for ep in static_endpoints:
+        try:
+            url = url_for(ep, _external=True)
+        except Exception as e:
+            # Si l’endpoint n’existe pas, on saute
+            continue
+        pages.append({
+            'loc': url,
+        })
+
+    xml = render_template('sitemap_template.xml', pages=pages)
+    response = make_response(xml)
+    response.headers['Content-Type'] = 'application/xml'
+    return response
 
 if __name__ == "__main__":
     server.run(debug=True)
